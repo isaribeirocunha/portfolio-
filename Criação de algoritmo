@@ -1,0 +1,17 @@
+Criação de algoritmo que imprime todos os números primos entre 0 e um número definido pelo usuário.
+
+import  java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner bofao = new Scanner(System.in);
+		System.out.println("Digite um número");
+		int n = bofao.nextInt();
+		if(n % 2 == 0){
+		    System.out.println("É par!");
+		}
+		else{
+		    System.out.println("É impar!");
+		}
+	}	
+}
