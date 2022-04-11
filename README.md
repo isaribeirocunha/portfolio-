@@ -1,4 +1,4 @@
-Portfólio:
+Portfólio 1º trimestre:
 Isadora Ribeiro
 
 Oi, meu nome é Isadora Ribeiro da Cunha, tenho 16 anos. Nasci em Florianópolis dia 20 de janeiro de 2006, onde morei por alguns anos até me mudar para onde moro atualmente, na Palhoça. Estudei em 3 outros colégios de Santa Catarina até vir para o que estou hoje em dia, o Senai. Estou no segundo ano do ensino médio, cursando o técnico integrado de Desenvolvimento de Sistemas. 
