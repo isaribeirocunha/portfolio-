@@ -1,0 +1,85 @@
+Shell Script
+#! /bin/bash/
+clear
+
+if [  $1 -gt  $2  ]
+then
+                    echo “$1 é maior que $2”
+else
+                    echo “$1 é maior que $2”
+fi
+soma=$ ( ($1+$2) )
+echo “A soma é $soma”
+
+1 é menor que 2
+A soma é 3
+
+isadora_ribeiro@SN- 358731 MINGW64 ~Desktop
+$
+
+02)
+#! /bin/bash/
+clear
+echo “ “
+echo “ “
+echo “ “
+who= $ (whoami)
+echo “bem vindo $who”
+echo “ “
+echo “A data de hoje é”
+date
+echo “ “ 
+echo “O status atual é”
+df -h
+
+Bem vindo isadora_ribeiro
+A data de hoje é
+Mon Jul 11 12:37:54         2022
+
+O status atual é 
+Filesystem                                 Size  Used  Avail  Use%  Mounted
+ on
+C: /Users/isadora_ribeiro/AppData/Local/Programas/Git 238gb 151gb 88gb 64% /
+isadora_ribeiro@SN- 358731 MINGW64 ~Desktop
+
+
+Atividade 2 Shell Script
+1. Fazer um script que receba como parâmetro um diretório e retorne a listagem do que tem dentro daquele diretório.
+
+#!/bin/bash
+cd $1
+ls
+
+2. Fazer um script que receba 2 valores e um nome de arquivo de texto. O script deve escrever dentro do arquivo o resultado da multiplicação entre os dois valores com uma frase de identificação.
+
+#!/bin/bash
+cd $1
+ls
+#!/bin/bash
+cd $3
+res=$(($1*$2))
+echo “O resultado da sua multiplicação é $res”
+
+isadora_r_cunha@SN-358732 MINGW64 ~/Desktop
+$ ./isadora.sh 6 9 teste.txt
+./isadora.sh: line 2: cd: 6: No such file or directory
+Portfolio-Isadora isadora.sh desktop.ini
+./isadora.sh: line 5: cd: teste.txt: No such file or directory
+O resultado da sua multiplicação é 54
+./isadora.sh: line 8: :wq: No such file or directory
+
+
+3. Qual a diferença entre enviar parâmetros para o script e pedir para o usuário a informação? Faça 2 scripts, um para cada caso.
+
+#!/bin/bash
+read -p “Digite o primeiro número” num1
+read -p “Digite o segundo número” num2
+res=$ ( ($num1*num2) )
+echo “O resultado da sua multiplicação é $res”
+
+Digite o primeiro número3
+Digite o segundo número2
+O resultado da multiplicação é 6
+
+
+
