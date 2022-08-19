@@ -1,3 +1,4 @@
+Atividade de fixação redirecionamento e encadeamento de comandos
 1.  Execute o comando:
      echo “Irei aprender novos comandos” | wc
       O que ocorreu?Quais comandos encadeados devo utilizar para redirecionar a saída para o arquivo ContadordePalavras?
