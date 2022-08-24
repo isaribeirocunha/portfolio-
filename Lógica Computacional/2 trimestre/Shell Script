@@ -1,0 +1,48 @@
+Atividade de IF - Shell Script
+
+01)
+#! /bin/bash/
+clear
+
+if [  $1 -gt  $2  ]
+then
+                    echo “$1 é maior que $2”
+else
+                    echo “$1 é maior que $2”
+fi
+soma=$ ( ($1+$2) )
+echo “A soma é $soma”
+
+1 é menor que 2
+A soma é 3
+
+isadora_ribeiro@SN- 358731 MINGW64 ~Desktop
+$
+
+02)
+#! /bin/bash/
+clear
+echo “ “
+echo “ “
+echo “ “
+who= $ (whoami)
+echo “bem vindo $who”
+echo “ “
+echo “A data de hoje é”
+date
+echo “ “ 
+echo “O status atual é”
+df -h
+
+Bem vindo isadora_ribeiro
+A data de hoje é
+Mon Jul 11 12:37:54         2022
+
+O status atual é 
+Filesystem                                 Size  Used  Avail  Use%  Mounted
+ on
+C: /Users/isadora_ribeiro/AppData/Local/Programas/Git 238gb 151gb 88gb 64% /
+isadora_ribeiro@SN- 358731 MINGW64 ~Desktop
+
+
+
