@@ -1,0 +1,221 @@
+Atividade Herança
+package objetos;
+
+
+public class alunos extends Pessoa{
+    String matricula; 
+
+    public alunos(String nome, int idade, String cpf, String matricula) {
+        super(nome, idade, cpf);
+        this.matricula = matricula;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    
+}
+
+
+
+package objetos; 
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
+public class Pessoa {
+    String nome;
+    int idade;
+    String cpf;
+
+    public Pessoa(String nome, int idade, String cpf) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cpf = cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    
+}
+    
+
+
+package objetos;
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
+public class Objetos {
+
+    public static void main(String[] args) {
+        int qnt = Integer.parseInt(JOptionPane.showInputDialog
+        ("Quantas pessoas deseja cadastrar?"));
+        ArrayList<Pessoa> lista = new ArrayList<>();
+        for(int i = 0; i < qnt; i++){
+            String nome = JOptionPane.showInputDialog
+            ("Digite o nome:");
+            int idade = Integer.parseInt(JOptionPane.showInputDialog
+            ("Digite a idade de: "+nome));
+            String cpf = JOptionPane.showInputDialog
+            ("Digite o CPF de: "+nome);
+            Pessoa p = new Pessoa(nome, idade, cpf);
+            lista.add(p);
+        }
+        for(Pessoa p:lista){
+            JOptionPane.showMessageDialog(null,"Nome: "+p.getNome()+
+             "\nIdade: "+p.getIdade()+"\nCPF: "+p.getCpf());
+        }
+    }    
+}
+
+
+Listinha para fixação
+1) Escreva um programa em java que leia o nome de um aluno e as notas de três provas que ele realizou.
+No final, informar o nome do aluno e sua média (aritmética).
+
+2) Escreva um programa em java que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). 
+Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o nome, o salário fixo e o salário final do mês.
+
+3) Escreva um programa em java que determina o consumo médio de um automóvel, sendo fornecida a distância total percorrida pelo automóvel e o total de combustível gasto.
+
+4) Escreva um programa em java, em que o usuário converta temperatura de Celsius para Fahrenheit e vice versa (ele decide qual será a conversão efetuada através de uma estrutura de decisão e Scanner)
+
+import java.util.*;
+ 
+public class Main {
+    public static void main(String[] args) {
+        // Escreva um programa em java que leia o nome de um aluno e as notas de três provas que ele realizou.
+        // No final, informar o nome do aluno e sua média (aritmética).
+ 
+        Scanner leitor = new Scanner(System.in);
+        System.out.printf("Insira o nome do aluno: ");
+        String nomeAluno = leitor.next();
+        System.out.printf("Insira a nota da primeira prova: ");
+        float primeiraNota = leitor.nextInt();
+        System.out.printf("Insira a nota da segunda prova: ");
+        float segundaNota = leitor.nextInt();
+        System.out.printf("Insira a nota da terceira prova: ");
+        float terceiraNota = leitor.nextInt();
+ 
+        float media = ((primeiraNota + segundaNota + terceiraNota) / 3);
+        String m = String.format("%.2f",media);
+        System.out.println("\nA média do aluno " + nomeAluno + " foi: " + m);
+    }
+ 
+}
+package atividades;
+
+import javax.swing.JOptionPane;
+
+public class Atividades {
+
+    public static void main(String[] args) {
+    // atv1();
+    // atv2();
+    // atv3();
+    atv4();
+    }
+
+    public static void atv1() {
+        String nome = JOptionPane.showInputDialog("nome do aluno");
+        float p1 = Float.parseFloat(JOptionPane.showInputDialog("digite a nota da primeira prova"));
+        float p2 = Float.parseFloat(JOptionPane.showInputDialog("digite a nota da segunda prova"));
+        float p3 = Float.parseFloat(JOptionPane.showInputDialog("digite a nota da terceira prova"));
+        float media = (p1 + p2 + p3) / 3;
+        JOptionPane.showMessageDialog(null, "nome: " + nome + "\nMédia " + media);
+    }
+
+    public static void atv2() {
+        String nome = JOptionPane.showInputDialog("nome do vendedor");
+        float sf = Float.parseFloat(JOptionPane.showInputDialog("salario fixo"));
+        float tv = Float.parseFloat(JOptionPane.showInputDialog("total de vendas"));
+        float comissao = tv*15/100;
+        float salarioFinal = sf + comissao;
+        JOptionPane.showMessageDialog(null, "funcionário " + nome + "\nSalário fixo: " + sf+"\nsalário final: "+salarioFinal);
+    }
+
+    public static void atv3() {
+        float distancia = Float.parseFloat(JOptionPane.showInputDialog("distancia percorrida"));
+        float litros = Float.parseFloat(JOptionPane.showInputDialog("combustivel gasto"));
+        float consumo = distancia/litros;
+        JOptionPane.showMessageDialog(null,"Consumo: "+consumo+ "km/l");
+    }
+
+    public static void atv4() {
+       int formula = Integer.parseInt(JOptionPane.showInputDialog("Qual converão deseja realizar?\n1: Celsius para Farenheit\n2:Farenheit para Celsius"));
+       switch(formula){
+           case 1:
+               //formula de conversão Celsius para Farenheit
+               float temperatura = Float.parseFloat(JOptionPane.showInputDialog(null, "digite a temperatura em °C"));
+               float resultado = temperatura * 9/5 + 32;
+               JOptionPane.showMessageDialog(null,resultado + "°F");
+               break;
+           case 2:
+               //formula de conversão farenheit para Celsius
+               temperatura = Float.parseFloat(JOptionPane.showInputDialog(null, "digite a temperatura em °F"));
+               resultado = (temperatura - 32 )* 5/9;
+               JOptionPane.showMessageDialog(null,resultado + "°C");
+               break;
+            default:
+               //caso o usuário digite um valor diferente de 1 ou 2
+                JOptionPane.showInputDialog(null, "opção invalida");
+               atv4();
+               break;
+       }
+    }
+
+
+
+
+
+
