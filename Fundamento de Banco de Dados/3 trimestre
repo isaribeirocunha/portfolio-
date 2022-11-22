@@ -1,0 +1,65 @@
+Atividade em Duplas
+Em duplas, desenvolva um sistema completo de banco de dados para um controle de estoque e vendas de uma loja de sua preferência 
+(pode escolher qual o produto que essa loja vende). Desenvolver o modelo entidade relacionamento e criar as tabelas em SQL.
+
+Tabela SQL:
+
+Create table Funcionarios(
+  CPF VARCHAR (11) not NULL,
+  NOME VARCHAR (60) not NULL,
+  SALÁRIO INT NOT NULL,
+  TURNO VARCHAR (10) NOT NULL,
+  FUNÇÃO VARCHAR (25) NOT NULL,
+  PRIMARY key (CPF)
+  );
+CREATE TABLE Financeiro(
+  FormasdePagamento VARCHAR (30) NOT NULL,
+  Despesas INT NOT NULL,
+  Lucro INT NOT NULL,
+  Identificador VARCHAR (11),
+  PRIMARY KEY (Identificador)
+  );
+    CREATE TABLE Estoque(
+    Marcas VARCHAR (50) NOT NULL,
+    Tamanhos VARCHAR (45) NOT NULL,
+    Modelo VARCHAR (100) NOT NULL,
+    Quantidade VARCHAR (1000),
+    PRIMARY KEY (Modelo)
+    );
+    
+    
+    
+    Chave Estrangeira e Manipulação de dados
+    Desenvolva o diagrama entidade relacionamento e seu respectivo código SQL contendo chave primária, chave estrangeira e pelo menos 3 itens 
+    em cada tabela para um sistema de concessionária, creche ou restaurante. Mínimo 4 entidades
+
+    CREATE TABLE Carro(
+  Chassi VARCHAR(17) NOT NULL,
+  DataAno int not NULL,
+  TamanhoPeso int NOT NULL,
+  Preço int not null,
+  Modelo VARCHAR(15) NOT NULL,
+  PRIMARY KEY (Chassi)
+  )
+
+CREATE TABLE Vendedor(
+  Salario int not NULL,
+  Funcao VARCHAR(20) NOT NULL,
+  CPF VARCHAR(12) NOT NULL,
+  PRIMARY KEY (CPF),
+  )
+  
+ CREATE TABLE Local(
+  Localizacao VARCHAR(20) NOT NULL,
+  Tamanho int not NULL,
+  Aluguel int NOT NULL,
+  Capacidade int NOT NULL,
+  PRIMARY KEY (Localizacao)
+  )
+  
+  CREATE TABLE TRANSPORTADORA(
+  CNPJ int NOT NULL,
+  Nome VARCHAR(40) not NULL,
+  ANO int NOT NULL,
+  PRIMARY KEY (CNPJ)
+  )
